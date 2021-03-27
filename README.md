@@ -26,3 +26,11 @@ Our motto symbolises the very essence of our cell, an expansion of BIO
 <br>
 Thus, symbolizing the foundation of our cell, letting young industrialists in the making to 
 breathe, take and create opportunities.
+<br>
+
+## Contributors
+- <a href="https://github.com/Mantron13">Manan Rakesh Sharma</a>
+
+
+
+Please give a ⭐ to show your support if you like this repository 
