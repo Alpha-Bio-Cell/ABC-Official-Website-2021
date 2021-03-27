@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>ALPHA BIO CELL-VIT</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'>
+       <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+       <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800'>
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="styles.css">
+       <link rel="icon" type="image/png" href="img/abc-w.png">
+
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- icons -->
+      <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+      <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+       
+<style type="text/css">
+  :root {
+  --delay: 3000ms;
+  --duration: 3000ms;
+  --iterations: 20;
+}
+/* •·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•·•· */
+
+.recruit {
+	width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #fff;
+  background: #4169E1;
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 6px 3px 12px #fff;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.recruit::before {
+content: '';
+  border-radius: 1000px;
+width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 5px solid #fff;
+  box-shadow: 0 0 40px #ffe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+a:active,
+a:focus { 
+    -moz-outline-style: none; 
+}
+button{
+	outline: none;
+}
+button:active {
+	outline: none;
+}
+@media(max-width:600px){
+	.recruit{
+		width: 250px;
+		left: -15%;
+	}
+.recruit::before {
+width: calc(240px + 12px);
+}
+}
+
+.recruit:hover, .recruit:focus {
+  color: #000;
+  transform: translateY(-6px);
+}
+
+.recruit:hover::before, .recruit:focus::before {
+  opacity: 1;
+}
+
+.recruit::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #fff;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+.reveal-text,
+.reveal-text::after {
+  animation-delay: var(--animation-delay, 2s);
+  animation-iteration-count: var(--iterations, 1);
+  animation-duration: var(--duration, 800ms);
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.reveal-text {
+  --animation-delay: var(--delay, 0);
+  --animation-duration: var(--duration, 800ms);
+  --animation-iterations: var(--iterations, 1);
+  position: relative;
+  font-size: 10vw;
+  animation-name: clip-text;
+  color: #FFF;
+  white-space: nowrap;
+  cursor: default;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f98b;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    pointer-events: none;
+    animation-name: text-revealer;
+  }
+  
+}
+
+
+@keyframes clip-text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+
+@keyframes text-revealer {
+  
+  0%, 50% {
+    transform-origin: 0 50%;
+  }
+  
+  60%, 100% {
+    transform-origin: 100% 50%;   
+  }
+
+  
+  60% {
+    transform: scaleX(1);
+  }
+  
+  100% {
+    transform: scaleX(0);
+  }
+}
+</style>      
+
+<body>
+
+      <div class="spinner-wrapper">
+<div class="spinner"></div>
+</div>
+      
+
+
+      <a name="home"></a>
+      <div class="wrapper" >
+
+            <!--------------- video section starts here --------------->
+
+            <div class="video-container" >
+                  <video playsinline autoplay muted loop id="bgvid">
+                        <source src="Pexels Videos 2021485.mp4" type="video/mp4">
+                  </video>
+            </div>
+
+            <div class="header">
+                  <h1 class="reveal-text">Alpha Bio Cell</h1>
+                  <br><br><br>
+
+            </div>
+
+            <!--------------- video section ends here --------------->
+
+            <!--------------- navbar starts here --------------->
+
+            <nav class="nav">
+                  <span id="brand">
+                        <a href="#" style="font-weight: 0.1em;"> <img src="img/ABC white.png" style="margin-top: 0px; width:70px;height: 60px;object-fit:scale-down; border-right: solid #4169E1 2px ">
+                        <span class="bio" style="margin-left: 5px; font-size: 18px;font-family: Poppins;  font-weight: lighter; margin-top: -35px;">Breathe In Opportunity</span> 
+                        </a>
+                  </span>
+
+                  <ul id="menu" style="color: white">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="AlphaBuzz/index.html"> AlphaBuzz </a></li>
+                        <li><a href="#team">Our team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                  </ul>
+
+                  <div id="toggle">
+                        <div class="span">
+                        <ion-icon style="width: 35px;height: 30px;background-color: #4169E1" name="menu"></ion-icon>
+                      </div>
+                  </div>
+
+            </nav>
+
+            <div id="resize">
+                  <div class="close-btn">
+                    <ion-icon style="width: 35px;height: 30px; z-index: 1;" ios="ios-close" md="md-close"></ion-icon>
+                  </div>
+
+                  <ul id="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="AlphaBuzz/index.html"> AlphaBuzz </a></li>
+                        <li><a href="#team">Our team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                  </ul>
+            </div>
+
+            <!--------------- navbar ends here --------------->
+
+            <div class="content">
+
+            <!--------------- about section starts here --------------->
+
+            <a name="about"></a>
+
+           <section class="story">
+             <div class="section-head wow fadeInUp" data-wow-delay="0.4s">
+               <h1 style="font-size: 60px; margin-top: 0px; text-shadow: #4169E1 0.7px; margin-left: 0px;">
+                <span style="color: #4169E1; ">A</span>bout <span style="color: #4169E1;">U</span>s</h1>
+             </div>
+
+                  <div class="container-fluid">
+
+                        <div class="section-data">
+
+                              <div class="row" style="height: auto;">
+                                  <div class="col-md-6 col-lg-6 col-sm-6 col-12 section-info wow fadeInUp" data-wow-delay="0.6s" style="text-align: justify;text-justify: inter-word; font-size: 24px;color: white ; font-family: Poppins; margin: auto; float: left;">Alpha Bio Cell is a group of like-minded individuals with complementing skill sets coming together to inculcate industrial, research and entrepreneurship skills in aspiring engineers. It is a team of raw minds, wanting to tap into the untapped potential that a bio-based industrial, business and entrepreneurship ventures could offer. We believe that Life-tech is the study of life should not be confined just to the laboratory but also be allowed to spread its wings to influence the other parts of the industry.  </div>
+                                   <div class="col-md-4 col-lg-4 col-sm-6 col-12 section-img wow fadeInUp" data-wow-delay="0.6s" style="margin: auto;padding-left: 20px; height:300px">
+                                          <video poster="https://cdn.pixabay.com/photo/2020/01/21/07/48/eye-4782246_960_720.jpg" controls>
+                                          <source src="ABC OFFICIAL REVEAL (screens).mp4" poster="https://cdn.pixabay.com/photo/2020/01/21/07/48/eye-4782246_960_720.jpg" type="video/mp4">
+                                          
+                                        </video>
+                                     </div> 
+                  
+                              </div>
+
+                            <div class="row wow fadeInUp" data-wow-delay="0.9s" style="height: 50px;"></div>
+                        
+                              <div class="row">
+                                    
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 "  style="text-align: center; margin-bottom: 20px" >
+                                  <h1><span class="counter" style="color: white; font-size: 45px;">15</span> <span style=" color: white" > +</span></h1>
+                                  <h3 style="color: white; font-size: 30px;">SESSIONS</h3>
+                                  <ion-icon style="color: #fff; font-size: 35px;" ios="ios-calendar" md="md-calendar"></ion-icon>
+                                  
+                                </div> 
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 "  style="text-align: center;margin-bottom: 20px" >
+                                  <h1 style="color: white; font-size: 45px;"><span class="counter">1024</span><span style=" color: white" > +</span></h1>
+                                  <h3 style="color: white; font-size: 30px;">PARTICIPANTS</h3>
+                                  <ion-icon style="color: #fff; font-size: 35px" ios="ios-people" md="md-people"></ion-icon>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 "  style="text-align: center;margin-bottom: 20px" >
+                                  <h1><span class="counter" style="color: white; font-size: 45px;">265500</span> <span style=" color: white"> +</span></h1>
+                                  <h3 style="color: white; font-size: 30px;">CASH STACK</h3>
+                                  <ion-icon style="color: #fff; font-size: 35px" ios="ios-cash" md="md-cash"></ion-icon>
+                                  
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-sm-6 col-xs-12 "  style="text-align: center;margin-bottom: 20px" >
+                                    <h1><span class="counter" style="color: white; font-size: 45px;">13</span> <span style=" color: white"> +</span></h1>
+                                    <h3 style="color: white; font-size: 30px;">PROJECTS</h3>
+                                    <ion-icon style="color: #fff; font-size: 35px" ios="ios-folder-open" md="md-folder-open"></ion-icon>
+                                    
+                                  </div>
+                            </div>  
+
+                        </div>
+
+                  </div>
+
+           </section>
+
+            <!--------------- about section ends here --------------->
+
+            <!--------------- Events section starts here --------------->
+<a name="events"></a>
+<section class="events" style="height: absolute"> 
+<header >
+      <h1 style="text-align: center; color: white; font-size: 60px; text-shadow: 0.7px;  margin-top: 0px;">
+            <span style="color: #4169E1; ">E</span>vents  </h1></header>
+      <div class="timeline">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url(img/interstellar_nebula-2560x1440.jpg); background-size: absolute;" data-year="Essence">
+          <div class="swiper-slide-content" >
+            <img src="img/essence white new.png" style="width:75%; height: 75%; ">
+            <div class="row" style="height: 20px"></div>
+                  <p style="color: white; font-size: 20px;  margin-top: 0px; margin-left: 0px; text-align: left; margin: auto; text-align: justify;text-justify: inter-word; z-index: 2">Our three day Flagship event that simulates the thrill and frustation of budget and funding of running a real business. <br><span style="font-weight: bold; font-size: 26px;">1. Evolution -</span> An inspiring session giving a new insight to the entrepreneurial world <br> <span style="font-weight: bold; font-size: 26px">2. Envision -</span> An enticing technical round of questions <br> <span style="font-weight: bold; font-size: 26px;">3. Rush -</span> Fast paced world of stock market brought to life  <br> <span style="font-weight: bold; font-size: 26px;">4. Stimulus -</span> Technical hackathon providing a platform to surface innovative ideas </p>
+
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://images.unsplash.com/photo-1514030849962-49ac486d3d20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1150&q=80);" data-year="Svadheyan">
+          <div class="swiper-slide-content" > 
+            <img src="img/SVADHEYAN WHITE new.png" style="width:80%; height: 90%;  ">
+            <div class="row" style="height: 20px"></div>
+                        <p style="color: white; font-size: 18px;  margin-top: 0px; margin-left: 0px; text-align: left; margin: auto; text-align: justify;text-justify: inter-word">Translating to introspection, the event focuses on a variety of aspects related to drug abuse bringing together technology and entrepreneurship at its core to fight it <br> <span style="font-weight: bold; font-size: 26px;">1. Smriti -</span> A panel discussion bringing darknes of addicton to the light. <br> <span style="font-weight: bold; font-size: 26px;">2. Prakrat -</span> Interactive session to find innovative solutions   <br> <span style="font-weight: bold; font-size: 26px;">3. Abhivyakt -</span> The platform for young minds to express themselves <br> <span style="font-weight: bold; font-size: 26px;"> </p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://images.unsplash.com/photo-1510733206332-dcd862288879?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);" data-year="Jigyasa">
+          <div class="swiper-slide-content" >
+            <img src="img/jigyasa white.png" style="width:60%; height: 60%;">
+            <div class="row" style="height: 20px"></div>
+                  <p style="color: white; font-size: 20px; word-spacing: 0.2em; margin-top: 0px; margin-left: 0px; text-align: left; margin: auto; text-align: justify;text-justify: inter-word ">A conventional hackathon to awake curiosity in the participants wherein they have to ideate and bring their ideas to life <br> <span style="font-weight: bold; font-size: 26px;">1. α Quest -</span> A mind hunt introducing an aspect of mobility into the event involving interaction with real environment <br> <span style="font-weight: bold; font-size: 26px;">2. Reverb -</span> A kick-starter segment focusing on ideation and development of a proof of concept <br> <span style="font-weight: bold; font-size: 26px;">3. Stimulus -</span> An emulation of real life time constraints </p>
+          </div>
+        </div>
+        <div class="swiper-slide" style="background-image: url(https://images.unsplash.com/photo-1507588131282-8c4da3ad10e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);" data-year="Radiate">
+          <div class="swiper-slide-content" > 
+            <img src="img/Radiate Logo White.png" style="width:60%; height: 60%; ">
+            <div class="row" style="height: 20px"></div>
+                  <p style="color: white; font-size: 20px; word-spacing: 0.2em; margin-top: 0px; margin-left: 0px; text-align: left;text-align: justify;text-justify: inter-word  margin: auto; ">An ideathon to break the monotony of everyday life creating an online forum full of brilliant ideating minds <br> <span style="font-weight: bold; font-size: 26px;">1. Perplex -</span> A round giving the participants an opportunity to go on an intellectual journey through a series of riddles <br> <span style="font-weight: bold; font-size: 26px;">2. Ignite -</span> A round all about ideation and not applying boundaries to thoughts <br> <span style="font-weight: bold; font-size: 26px;">3. Lumos -</span> A round to express and pitch the sharks all to see if you can cash it in </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+
+ </section>  
+            <!--------------- events section ends here --------------->
+            <!---------------projects section starts here --------------->
+            <a name="projects"></a>
+            <section class="projects" style="height: auto;">
+                  <header style="text-align: center; font-size: 55px;margin-top: 30px; text-shadow: 0.9px; color: white;">
+                    <span style="color: #4169E1; font-size: 60px;margin-top: 20px; text-shadow: 0.9px;">
+                      P</span>rojects</header>
+                <div class="container">
+                     <div class="navContainer">
+                       <div class="leftClass">  </div>
+                       <div class="rightClass">  </div>
+                     </div>
+                  <section class="slider">
+
+                   <img width="100%" height="100%" src="img/color i web.jpg" class="left1" />
+                   <img width="100%" height="100%" src="img/bowlr web.jpg" class="left"/>
+                   <img width="100%" height="100%" src="img/elixir web 2.jpg" class="center"/>
+                   <img width="100%" height="100%" src="img/moksh web.jpg" class="right"/>
+                   <img width="100%" height="100%" src="img/pranayam web.jpg" class="right1" />
+
+                   
+                  </section>
+                </div>
+            </section>
+
+            <!--------------- projects section ends here --------------->
+
+            <!---------------team section starts here --------------->
+
+            <a name="team"></a>   
+           
+
+    
+    <section id="members" class="main special">
+      <div class="Team wow fadeInUp " data-wow-delay="0.4s" style="padding-bottom: 30px">
+                 
+        <header style="text-align: center; font-size: 55px;margin-top: 0px; text-shadow: 0.7px; color: white;">
+          <span style="color: #4169E1; font-size: 60px;margin-top: 20px; text-shadow: 0.7px;">
+            O</span>ur <span style="color: #4169E1; font-size: 60px;margin-top: 20px; text-shadow: 0.7px;">
+            T</span>eam</header>
+
+         <div class="row wow fadeInUp" data-wow-delay="0.6s" style="margin-top: 30px; width: 100%;padding-left: 50px;">
+            
+              <div class="col-md-6 col-lg-6 col-sm-3 col-xs-6 d wow fadeInLeft"data-wow-delay="0.4s" style="text-align: center;" >
+                      <div class="team-round">
+                                <div class="profile">
+                                     <div class="img">
+                                          <img src="img/ram.jpeg">
+                                          <div class="overlay">
+                                           <a href="https://www.linkedin.com/in/ramesh-pathy-manian-0b368373" class="icon" title="">
+                                            <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                           </a>
+                              </div>
+                                        </div>
+                                    </div>
+                                          <h3 class="team-name">
+                                        Dr. Ramesh Pathy
+                                      </h3>
+                                      <span>Faculty Coordinator</span>
+                          
+                      </div>
+              </div>  
+              <div class="col-md-6 col-lg-6 col-sm-3 col-xs-6" style="text-align: center;">
+                      <div class="team-round">
+                                <div class="profile">
+
+                                     <div class="img">
+                                          <img src="img/sut.jpeg">
+                                                 <div class="overlay">
+                                           <a href="https://www.linkedin.com/in/suthindhiran-k-3718ba110" class="icon" title="">
+                                            <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                           </a>
+                                      </div>
+                                        </div>
+                                    </div> 
+                                          <h3 class="team-name">
+                                        Dr. Suthindhiran K
+                                      </h3>
+                                      <span>Faculty Coordinator</span>
+                         
+                      </div>
+              </div>
+
+             
+          </div>
+          <br><br>
+
+      <div class="wrapper" id="content-desktop">
+          <nav class="tabs">
+              <div class="selector"></div>
+              <a href="#" id="title-ex-board-desktop" class="no-border-on-link">Board 2020</a>
+              <a href="#" id="title-current-board-desktop" class="active no-border-on-link">Current Board</a>
+              <a href="#" id="title-advisory-board-desktop" class="no-border-on-link">Board 2019</a>
+          </nav>
+      </div>
+     <!--<div class="wrapper" id="content-mobile">
+          <nav class="tabs">
+              <div class="selector"></div>
+              <a href="#" id="title-ex-board-mobile" class="no-border-on-link">Ex</a>
+              <a href="#" id="title-current-board-mobile" class="active no-border-on-link">Current</a>
+              <a href="#" id="title-advisory-board-mobile" class="no-border-on-link">Advisory</a>
+          </nav>
+      </div>-->
+
+      <!--current board-->
+      <div id="current-board">
+      <div class="row team" style=" margin: auto; margin-top: 20px; text-align: center; margin-bottom: 20px">
+        <div class="col-lg-12 col-md-12">
+          <div class="center" style="text-align: center;">
+                 <h3 style="font-size: 50px; color: white;">Board of Directors 2021-2022</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="height: 50px; max-width: 100%"></div>
+                                          <div class="row" style="max-width: 100%; padding-left: 50px;" >
+                                                
+                        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 wow fadeIn" data-wow-delay="0.4s" style="margin-bottom: 20px" >
+                                <div class="team-round">
+                                          <div class="profile">
+                                               <div class="img">
+                                                    <img src="img\current_board\Deekshita.jpeg">
+                                                    <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/deekshitha-j-674270199" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                        </div>
+                                                  </div>
+                                              </div>
+                                                    <h3 class="team-name manan">
+                                                  Deekshitha J
+                                                </h3>
+                                                <span>Chairperson</span>
+                                    
+                                </div>
+                        </div>        
+                        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6wow fadeIn" data-wow-delay="0.3s" style="margin-bottom: 20px" >
+                                <div class="team-round">
+                                          <div class="profile">
+
+                                               <div class="img">
+                                                    <img src="img\current_board\Anwesha.jpeg">
+                                                           <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/anwesha-maity-1st-606572199/" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                                </div>
+                                                  </div>
+                                              </div> 
+                                                    <h3 class="team-name">
+                                                  Anwesha Maity
+                                                </h3>
+                                                <span>Vice Chair</span>
+                                   
+                                </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+                                <div class="team-round">
+                                          <div class="profile">
+
+                                               <div class="img">
+                                                    <img src="img\current_board\Abhay.jpeg">
+                                                          <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/abhaydeep-singh-279574199/" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                                </div>
+                                                  </div>
+                                              </div> 
+                                                        <h3 class="team-name">
+                                                       Abhaydeep Singh
+                                                    </h3>
+                                                    <span>Director Projects</span>
+                                    
+                                </div>
+                        </div>
+                       
+
+                                
+                        <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+                                <div class="team-round">
+                                          <div class="profile">
+                                               <div class="img">
+                                                    <img src="img\current_board\Kaviya.jpeg">
+                                                    <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/kaviya-aditi-891915171" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                        </div>
+                                                  </div>
+                                              </div>
+                                                    <h3 class="team-name">
+                                                  Kaviya Aditi
+                                                </h3>
+                                                <span>Director Operations</span>
+                                    
+                                </div>
+                        </div>        
+                        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+                                <div class="team-round">
+                                          <div class="profile">
+
+                                               <div class="img">
+                                                    <img src="img\current_board\Prerana.jpeg">
+                                                           <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/prerana-balasubramanian-304075189" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                                </div>
+                                                  </div>
+                                              </div> 
+                                                    <h3 class="team-name">
+                                                  B Prerana
+                                                </h3>
+                                                <span>Director Events</span>
+                                   
+                                </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+                                <div class="team-round">
+                                          <div class="profile">
+
+                                               <div class="img">
+                                                    <img src="img\current_board\Shivangi.jpeg">
+                                                          <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/shivangi-chaurasia-aa14371a1" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                                </div>
+                                                  </div>
+                                              </div> 
+                                                        <h3 class="team-name">
+                                                       Shivangi Chaurasia
+                                                    </h3>
+                                                    <span>Technical Head</span>
+                                    
+                                </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+                                <div class="team-round">
+                                          <div class="profile">
+
+                                               <div class="img">
+                                                    <img src="img\current_board\Anushka.jpeg">
+                                                          <div class="overlay">
+                                                     <a href="https://www.linkedin.com/mwlite/in/anushka-bhandari-4204381a1" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                                </div>
+                                                  </div>
+                                              </div> 
+                                                        <h3 class="team-name">
+                                                       Anushka Bhandari
+                                                    </h3>
+                                                    <span>Research Head</span>
+                                    
+                                </div>
+                        </div>
+
+                       
+
+
+                              
+                        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow " style="margin-bottom: 20px"  >
+                                <div class="team-round">
+                                          <div class="profile">
+                                               <div class="img">
+                                                    <img src="img\current_board\Aaryan.jpeg">
+                                                    <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/aaryan-mehta/" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                        </div>
+                                                  </div>
+                                              </div>
+                                                    <h3 class="team-name">
+                                                  Aaryan Mehta
+                                                </h3>
+                                                <span>Finance Head</span>
+                                    
+                                </div>
+                        </div>        
+                        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow " style="margin-bottom: 20px"  >
+                                <div class="team-round">
+                                          <div class="profile">
+                                               <div class="img">
+                                                    <img src="img\current_board\Shinjini.jpeg">
+                                                    <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/souvik-ghosh-b47863160" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                        </div>
+                                                  </div>
+                                              </div>
+                                                    <h3 class="team-name">
+                                                  Shinjini Chakarborty
+                                                </h3>
+                                                <span>Design Head</span>
+                                    
+                                </div>
+                        </div> 
+                        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow "  style="margin-bottom: 20px"  >
+                                <div class="team-round">
+                                          <div class="profile">
+
+                                               <div class="img">
+                                                    <img src="img\current_board\Prajwal.jpeg">
+                                                          <div class="overlay">
+                                                     <a href="https://www.linkedin.com/in/prajwal-baliga-b-452905199" class="icon" title="">
+                                                      <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                                                     </a>
+                                                </div>
+                                                  </div>
+                                              </div> 
+                                                        <h3 class="team-name">
+                                                       Prajwal Baliga
+                                                    </h3>
+                                                    <span>Outreach Head</span>
+                                    
+                                </div>
+                        </div>
+
+      </div> 
+    </div>
+
+
+
+    <!--ex board-->
+    <div id="ex-board">
+      <div class="row team" style=" margin: auto; margin-top: 20px; text-align: center; margin-bottom: 20px">
+        <div class="col-lg-12 col-md-12">
+          <div class="center" style="text-align: center;">
+                 <h3 style="font-size: 50px; color: white;">Board of Directors 2020-2021</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="height: 50px; max-width: 100%"></div>
+      <div class="row" style="max-width: 100%; padding-left: 50px;" >
+                  
+      <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow fadeIn" data-wow-delay="0.4s" style="margin-bottom: 20px" >
+        <div class="team-round">
+            <div class="profile">
+                 <div class="img">
+                      <img src="img\ex_board\manan.jpg">
+                      <div class="overlay">
+                       <a href="https://www.linkedin.com/in/manan-rakesh-sharma-a004a7180" class="icon" title="">
+                        <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                       </a>
+                  </div>
+                </div>
+              </div>
+                      <h3 class="team-name manan">
+                    Manan Rakesh Sharma
+                  </h3>
+                  <span>Chairman</span>
+      
+        </div>
+      </div>
+        <!-- col end -->
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6wow fadeIn" data-wow-delay="0.3s" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\ex_board\shr.jpg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/shreya-agarwal-792215180" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                            Shreya Agarwal
+                          </h3>
+                          <span>Director Logistics</span>
+             
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\ex_board\dm.jpeg">
+                                    <div class="overlay">
+                               <a href="https://www.linkedin.com/in/dhananjay-majage-b3517419a" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                          </div>
+                    </div> 
+                                  <h3 class="team-name">
+                                 Dhananjay Majage
+                              </h3>
+                              <span>Director Projects</span>
+              
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+                         <div class="img">
+                              <img src="img\ex_board\sidd.jpeg">
+                              <div class="overlay">
+                               <a href="https://www.linkedin.com/in/siddharth-dev-a499a8185" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                  </div>
+                            </div>
+                        </div>
+                              <h3 class="team-name">
+                            Siddharth Dev
+                          </h3>
+                          <span>Director Operations</span>
+              
+          </div>
+        </div>        
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\ex_board\Janani.jpg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/janani-ramachandran-384402182" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                            Janani Ramachandran
+                          </h3>
+                          <span>Director Sponsorship</span>
+             
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\ex_board\shreyan.jpg">
+                                    <div class="overlay">
+                               <a href="https://www.linkedin.com/in/shreyan-gupta-81304b17a" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                                  <h3 class="team-name">
+                                 Shreyan Gupta
+                              </h3>
+                              <span>Design Head</span>
+              
+          </div>
+  </div>
+ 
+
+
+  <div class="col-md-1 col-lg-1 col-sm-6 col-xs-12" ></div>       
+  <div class="col-md-6 col-lg-6 col-sm-3 col-xs-6 wow " style="margin-bottom: 20px"  >
+          <div class="team-round">
+                    <div class="profile">
+                         <div class="img">
+                              <img src="img\ex_board\souvik.jpeg">
+                              <div class="overlay">
+                               <a href="https://www.linkedin.com/in/souvik-ghosh-b47863160" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                  </div>
+                            </div>
+                        </div>
+                              <h3 class="team-name">
+                            Souvik Ghosh
+                          </h3>
+                          <span>Research Head</span>
+              
+          </div>
+  </div>        
+  
+  <div class="col-md-3 col-lg-3 col-sm-3 col-xs-6 wow "  style="margin-bottom: 20px"  >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\ex_board\abhi.jpeg">
+                                    <div class="overlay">
+                               <a href="https://www.linkedin.com/in/abhishek-prabhu-3899a9185" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                                  <h3 class="team-name">
+                                 Abhishek Prabhu
+                              </h3>
+                              <span>Finance Head</span>
+              
+          </div>
+  </div>
+
+      </div>
+    </div>
+
+    <!-- advisory Board -->
+    <div id="advisory-board">
+      <div class="row team" style=" margin: auto; margin-top: 20px; text-align: center; margin-bottom: 20px">
+        <div class="col-lg-12 col-md-12">
+          <div class="center" style="text-align: center;">
+                 <h3 style="font-size: 50px; color: white;">Board of Directors 2019-2020</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="height: 50px; max-width: 100%"></div>
+      <div class="row" style="max-width: 100%; padding-left: 50px;" >
+                  
+      <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow fadeIn" data-wow-delay="0.4s" style="margin-bottom: 20px" >
+        <div class="team-round">
+            <div class="profile">
+                 <div class="img">
+                      <img src="img\advisory_board\dd.jpeg">
+                      <div class="overlay">
+                       <a href="https://www.linkedin.com/in/devaansh-gupta/" class="icon" title="">
+                        <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                       </a>
+                  </div>
+                </div>
+              </div>
+                      <h3 class="team-name manan">
+                   Devaansh Gupta
+                  </h3>
+                  <span>Chairman</span>
+      
+        </div>
+      </div>
+        <!-- col end -->
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6wow fadeIn" data-wow-delay="0.3s" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\advisory_board\kan.jpg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/kanika-adhikari-9a6639167/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                            Kanika Adhikari
+                          </h3>
+                          <span>Vice Chairman</span>
+             
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\advisory_board\sam.jpeg">
+                                    <div class="overlay">
+                               <a href="https://www.linkedin.com/in/samarth-arora-marketing/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                          </div>
+                    </div> 
+                                  <h3 class="team-name">
+                                 Samarth Arora
+                              </h3>
+                              <span>Research Head</span>
+              
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+                         <div class="img">
+                              <img src="img\advisory_board\AyushTripathi.jpg">
+                              <div class="overlay">
+                               <a href="https://www.linkedin.com/in/ayush-tripathi-51b8b3155/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                  </div>
+                            </div>
+                        </div>
+                              <h3 class="team-name">
+                                Ayush Tripathi
+                          </h3>
+                          <span>Operations Head</span>
+              
+          </div>
+        </div>        
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\advisory_board\Tejas.jpeg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/tejas-jambhale/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                            Tejas Jambhale
+                          </h3>
+                          <span>Techinical Head</span>
+             
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\advisory_board\AnieshaOwlak.jpg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/aniesha-owlak-966701155/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                                Aniesha Owlak
+                          </h3>
+                          <span>Sponsors Head</span>
+             
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\advisory_board\AdityaChoksi.jpg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/aaditya-chokshi-850825152/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                                Aaditya Chokshi
+
+                          </h3>
+                          <span>Media & Marketing</span>
+             
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\advisory_board\rashi.jpeg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/rashi-kumari-723ba8185/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                                Rashi Kumari
+
+                          </h3>
+                          <span>HR</span>
+             
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-4 col-sm-3 col-xs-6 wow" style="margin-bottom: 20px" >
+          <div class="team-round">
+                    <div class="profile">
+
+                         <div class="img">
+                              <img src="img\advisory_board\harshwardhan.jpeg">
+                                     <div class="overlay">
+                               <a href="https://www.linkedin.com/in/harshvardhan-ahuja-237527166/" class="icon" title="">
+                                <ion-icon style="color: white" name="logo-linkedin"></ion-icon>
+                               </a>
+                          </div>
+                            </div>
+                        </div> 
+                              <h3 class="team-name">
+                                Harshvardhan Ahuja
+
+                          </h3>
+                          <span>Finance Head</span>
+             
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+            <!--------------- new team section ends --------------->
+
+
+            
+
+
+              <!--------------- footer starts here --------------->
+                <a name="contact"></a>
+                 <div class="footer" style=" background-repeat: no-repeat; background-size: cover; width: 100%; height: auto;">
+                     <div class="container-fluid">
+                         <div class="info">
+                              <div class="row" style="margin: auto; padding: 10px; justify-content: center;">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style=" text-align: center;">
+                                          <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name:">
+                                                <h3 class="f-title f_600 t_color f_size_18" style="font-size: 40px; color: white; text-align: center;">Get in Touch</h3>
+                                                <p>Don’t miss any updates of our new projects and events.!</p>
+                                                <form action="#" class="form-inline f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1" style="text-align: center; margin-left: 30px">
+                                                    <input type="text" name="EMAIL" class="form-control  memail" placeholder="Email" style="width: 60%">
+                                                    <button class="btn btn-primary">Subscribe</button>
+                                                    
+                                                    
+                                                </form>
+                                          </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" style="text-align: center;">
+                                          <h3 style="font-size: 40px; color: white; text-align:center; margin-top: 10px">ADDRESS</h3>
+                                          <div class="row" style="height: 20px;"></div>
+                                          <h4 style="font-size: 30px; text-align:center;">Vit University</h4>
+                                          <br>
+                                          <h4  style="font-size: 30px; text-align: center;">Vellore,Tamil Nadu</h4>
+                                          <br>
+                                          <h4 style="text-align: center;" >632014</h4>
+                                    </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInRight" style="text-align: center; margin-top: 20px">
+                                             <h3 style="font-size: 40px;  color: white;justify-content: center; text-align: center;" >VISIT US AT</h3>
+                                           <ul style="list-style-type: none;display: inline-block; margin-top: 15px">
+                                                <li><a href="https://www.facebook.com/pages/category/College---University/Alpha-Bio-Cell-2837739956251320/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                                <li><a href="https://www.linkedin.com/company/alpha-bio-cell/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                                                <li><a href="https://instagram.com/alphabiocell?igshid=lecqoden14ym"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                           </ul>
+                                          
+                                        </div>
+                                  
+
+                                </div>    
+                              </div>
+                              <div style="text-align: center; margin-top: 10px">
+                                    <p style=" color: white; font-size: 30px"> Developed and designed by Manan</p>
+                                    <br>
+                                    <p>
+                                      Copyright &copy;
+                                      <script>
+                                        document.write(new Date().getFullYear());
+                                      </script>
+                                      All rights reserved
+                                    </p>
+                              </div>
+                              
+                        </div>
+                  </div>
+            </div>
+
+
+
+
+            
+
+            <!--------------- footer ends here --------------->
+
+            </div>
+
+      </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+
+// navigation starts here
+$("#toggle").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $("#resize ul li a").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $(".close-btn").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".nav");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+new WOW().init();
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+
+</script>
+
+
+<script>
+$(document).ready(function() {
+preloaderFadeOutTime = 4000;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+</script>
+
+
+
+
+
+<script type="text/javascript" src="js/slider.jquery.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
+<script  src="js/function.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js'></script><script  src="js/script.js"></script>
+            
+</html>

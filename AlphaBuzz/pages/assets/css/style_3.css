@@ -1,0 +1,46 @@
+html
+{
+    overflow-x: hidden;
+    font-size: 1rem;
+}
+.container
+{
+    margin: 0 auto;
+}
+#tt p
+{
+    border: 1px;
+    border-radius: 40px;
+}
+#articles img
+{
+    border: 1px;
+    border-radius: 20px;
+}
+
+@media(max-width: 576px)
+{
+    html
+    {
+        font-size: 0.7rem;
+    }
+    .art img
+    {
+        width: 120px;
+        height: 100px;
+    }
+}
+@media(min-width:768px)
+{
+    .pagination
+    {
+        margin-top: 15%;
+    }
+}
+@media(min-width: 992px)
+{
+    .art
+    {
+        margin-left: 20%;
+    }
+}

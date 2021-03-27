@@ -1,0 +1,108 @@
+a {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  a {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.icon {
+  color: black;
+}
+.Abuz{
+height: 15%;
+width: 40%; 
+margin-left: 28%; 
+margin-top: -4%;
+}
+.row.text-left {
+  width: 100%;
+}
+
+
+.row {
+  width: 100%;
+}
+
+.col-4.col-lg-5.col-xl-3 {
+  width: 100px;
+  height: 120px;
+}
+
+.rounded.float-left {
+  border-radius: 100px;
+}
+
+#parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1200px) {
+  div {
+    align-items: center;
+    margin: auto;
+    width: 100;
+  }
+}
+
+@media (min-width: 1200px) {
+  #news-name {
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #box-shadow {
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    margin-top: 10px;
+  }
+}
+@media(min-width: 200px) and (max-width: 700px){
+
+ .Abuz{
+height: 15%;
+width: 60%; 
+margin-left: 16%; 
+margin-top: -4%;
+}
+.buzz {
+    width: 50%;
+} 
+}
+@media (max-width: 576px) {
+  #by-class {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-left {
+    font-size: 16px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #news-name {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #full-box {
+    width: 50%;
+  }
+}
+
+.rounded {
+  border-radius: 40px !important;
+}
+
+p.grey-text {
+    text-align: justify;
+}

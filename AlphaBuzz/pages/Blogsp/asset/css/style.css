@@ -1,0 +1,142 @@
+0, 200;0, 300;0, 400;0, 500;0, 600;0, 700;1, 100;1, 300;1, 400;1, 500;1, 600;1, 700&display=swap); html, body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar-dark {
+  background-color: #512DA8;
+}
+
+.modal-content {
+  background-color: rgb(29, 29, 29);
+  color: floralwhite;
+}
+
+.modal-header {
+  border-bottom: 1px solid #292b2c;
+}
+
+ul {
+  list-style-type: none;
+  color: rgb(233, 176, 64);
+}
+
+li {
+  color: floralwhite;
+}
+
+.footer {
+  color: black;
+  background-color: #292b2c;
+  margin: 0px auto;
+  padding: 20px 0px;
+  color: floralwhite;
+}
+
+.btn-google i {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  background-color: rgb(255, 255, 255, 0.1);
+  color: #fabf2c;
+}
+
+.footer i:hover {
+  color: floralwhite;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+.footer-joinus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fafafa;
+  background: #1a1b1d;
+  border-radius: 999px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.footer-joinus-text {
+  font-weight: 600;
+  font-size: 120%;
+  padding: 0 15px;
+  line-height: 1.15;
+  box-sizing: border-box;
+  text-align: left;
+  text-decoration: none;
+}
+
+.footer-joinus_button {
+  background: #fabf2c;
+  border-radius: 99px;
+  padding: 9px;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1b1d;
+  min-width: 90px;
+  text-align: center;
+  text-decoration: none;
+  transition: .25s ease-out;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#by-class {
+  line-height: 10px;
+}
+
+.navbar {
+  min-height: 20px !important;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 300px) {
+  .rounded.float-left {
+    border-radius: 20px !important;
+  }
+}
+
+#pic {
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 900px) {
+  #pic {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 300px) {
+  #pic {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 576px) {
+  #parallax {
+    width: 80%;
+  }
+}
+
+.col-6.col-sm-6.col-md-4.col-lg-4.text-center {
+  padding-bottom: 30px;
+}
+

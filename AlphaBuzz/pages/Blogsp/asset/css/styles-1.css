@@ -1,0 +1,537 @@
+html {
+  font-size: 1 rem;
+  overflow-x: hidden;
+}
+
+body {
+  background: 100% 100%;
+  overflow: hidden;
+}
+
+0, 200;0, 300;0, 400;0, 500;0, 600;0, 700;1, 100;1, 300;1, 400;1, 500;1, 600;1, 700&display=swap); html, body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar-dark {
+  background-color: #512DA8;
+}
+
+.modal-content {
+  background-color: rgb(29, 29, 29);
+  color: floralwhite;
+}
+
+.modal-header {
+  border-bottom: 1px solid #292b2c;
+}
+
+ul {
+  list-style-type: none;
+  color: rgb(233, 176, 64);
+}
+
+li {
+  color: floralwhite;
+}
+
+.footer {
+  background-color: #292b2c;
+  margin: 0px auto;
+  padding: 20px 0px;
+  color: floralwhite;
+}
+
+.btn-google i {
+  border-radius: 50%;
+  height: 54px;
+  width: 54px;
+  line-height: 54px;
+  background-color: rgb(255, 255, 255, 0.1);
+  color: #fabf2c;
+}
+
+.footer i:hover {
+  color: floralwhite;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+.footer-joinus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fafafa;
+  background: #1a1b1d;
+  border-radius: 999px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.footer-joinus-text {
+  font-weight: 600;
+  font-size: 120%;
+  padding: 0 15px;
+  line-height: 1.15;
+  box-sizing: border-box;
+  text-align: left;
+  text-decoration: none;
+}
+
+.footer-joinus_button {
+  background: #fabf2c;
+  border-radius: 99px;
+  padding: 9px;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1b1d;
+  min-width: 90px;
+  text-align: center;
+  text-decoration: none;
+  transition: .25s ease-out;
+}
+
+.basic {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 89px;
+  color: #000000;
+}
+
+.content {
+  background: #E8C22F;
+  border-radius: 57px;
+}
+
+.lor {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #000000;
+}
+
+.web-dev {
+  position: absolute;
+  width: 277px;
+  height: 277px;
+  left: 110px;
+  top: 490px;
+}
+
+.data {
+  position: absolute;
+  width: 277px;
+  height: 277px;
+  left: 595px;
+  top: 490px;
+}
+
+.ml {
+  position: absolute;
+  width: 277px;
+  height: 277px;
+  left: 1071px;
+  top: 490px;
+}
+
+.app {
+  position: absolute;
+  width: 277px;
+  height: 277px;
+  left: 110px;
+  top: 800px;
+}
+
+.ui {
+  position: absolute;
+  width: 277px;
+  height: 277px;
+  left: 595px;
+  top: 800px;
+  border-radius: 22px;
+}
+
+.dev {
+  position: absolute;
+  width: 277px;
+  height: 277px;
+  left: 1071px;
+  top: 800px;
+  border-radius: 22px;
+}
+
+@media (max-width:576px) {
+  html {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width:576px) {
+  .images {
+    margin-left: 21px;
+  }
+}
+
+@media (max-width:576px) {
+  .images img {
+    width: 100px;
+    height: 80px;
+    margin: 20px;
+    padding: 5px;
+  }
+}
+
+@media (width: 768px) {
+  html {
+    font-size: 0.5rem;
+  }
+}
+
+@media (width: 768px) {
+  .images img {
+    width: 150px;
+    height: 120px;
+  }
+}
+
+/* @media(max-width: 576px)
+{
+   //mobile view
+    {
+        
+        .basic {
+        width: 300px;
+        height: 50px;
+        left: 140px;
+        top: 110px;
+        font-size: 49px;
+    }
+    
+.lor{
+width: 49px;
+height: 114px;
+left: 22px;
+top: 90px;
+font-size: 22px;
+line-height: 30px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.web-dev {
+width: 127px;
+height: 127px;
+left: 50px;
+top: 380px;
+}
+.data {
+width: 137px;
+height: 127px;
+left: 220px;
+top: 380px;
+}
+.ml {
+width: 127px;
+height: 127px;
+left: 400px;
+top: 380px;
+}
+.app {
+width: 127px;
+height: 127px;
+left: 50px;
+top: 530px;
+}
+.ui {
+width: 127px;
+height: 127px;
+left: 220px;
+top: 530px;
+}
+.dev {
+width: 127px;
+height: 127px;
+left: 400px;
+top: 530px;
+}
+.footer{
+    margin-top: 400px;
+    
+    } 
+    
+} */
+
+/* @media (min-width: 481px) and (max-width: 767px) {
+  
+  {
+        
+        .basic {
+        width: 380px;
+        height: 50px;
+        left: 80px;
+        top: 110px;
+        font-size: 49px;
+    }
+    
+.lor{
+width: 529px;
+height: 113px;
+left: 22px;
+top: 90px;
+font-size: 22px;
+line-height: 30px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.web-dev {
+width: 127px;
+height: 127px;
+left: 50px;
+top: 380px;
+}
+.data {
+width: 137px;
+height: 127px;
+left: 220px;
+top: 380px;
+}
+.ml {
+width: 127px;
+height: 127px;
+left: 390px;
+top: 380px;
+}
+.app {
+width: 127px;
+height: 127px;
+left: 50px;
+top: 530px;
+}
+.ui {
+width: 127px;
+height: 127px;
+left: 220px;
+top: 530px;
+}
+.dev {
+width: 127px;
+height: 127px;
+left: 390px;
+top: 530px;
+}
+.footer{
+    margin-top: 470px;
+    
+    }
+  
+}
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px */
+
+/* @media(max-width: 600px)
+    {
+        
+        .basic {
+        width: 380px;
+        height: 50px;
+        left: 180px;
+        top: 110px;
+        font-size: 49px;
+    }
+    
+.lor{
+width: 529px;
+height: 113px;
+left: 22px;
+top: 90px;
+font-size: 22px;
+line-height: 30px;
+padding-left: 20px;
+padding-right: 20px;
+}
+.web-dev {
+width: 127px;
+height: 127px;
+left: 50px;
+top: 380px;
+}
+.data {
+width: 137px;
+height: 127px;
+left: 220px;
+top: 380px;
+}
+.ml {
+width: 127px;
+height: 127px;
+left: 390px;
+top: 380px;
+}
+.app {
+width: 127px;
+height: 127px;
+left: 50px;
+top: 530px;
+}
+.ui {
+width: 127px;
+height: 127px;
+left: 220px;
+top: 530px;
+}
+.dev {
+width: 127px;
+height: 127px;
+left: 390px;
+top: 530px;
+}
+.footer{
+    margin-top: 470px;
+    
+    }
+} */
+
+/* @media(max-width: 768px)
+{
+    .basic {
+        width: 420px;
+        left: 200px;
+        font-size: 69px;
+    }
+    .content {
+width: 1371px;
+height: 167px;
+left: 20px;
+}
+.lor{
+width: 712px;
+height: 164px;
+left: 22px;
+font-size: 28px;
+padding-left: 40px;
+padding-right: 40px;
+}
+.web-dev {
+width: 177px;
+height: 177px;
+left: 50px;
+top: 490px;
+}
+.data {
+width: 187px;
+height: 177px;
+left: 270px;
+top: 490px;
+}
+.ml {
+width: 177px;
+height: 177px;
+left: 490px;
+top: 490px;
+}
+.app {
+width: 177px;
+height: 177px;
+left: 50px;
+top: 690px;
+}
+.ui {
+width: 177px;
+height: 177px;
+left: 270px;
+top: 690px;
+}
+.dev {
+width: 177px;
+height: 177px;
+left: 490px;
+top: 690px;
+}
+.footer{
+    margin-top: 610px;
+    
+    }
+} */
+
+/* @media (orientation: portrait)
+{
+  {
+        body{
+            background: 100%
+        }
+        .basic {
+        width: 420px;
+        left: 1rem;
+        font-size: 6rem;
+    }
+    .content {
+width: 1371px;
+height: 167px;
+left: 10px;
+}
+.lor{
+width: 712px;
+height: 14px;
+left: 22px;
+font-size: 28px;
+padding-left: 40px;
+padding-right: 40px;
+}
+.web-dev {
+width: 177px;
+height: 177px;
+left: 50px;
+top: 490px;
+}
+.data {
+width: 187px;
+height: 177px;
+left: 270px;
+top: 490px;
+}
+.ml {
+width: 177px;
+height: 177px;
+left: 490px;
+top: 490px;
+}
+.app {
+width: 177px;
+height: 177px;
+left: 50px;
+top: 690px;
+}
+.ui {
+width: 177px;
+height: 177px;
+left: 270px;
+top: 690px;
+}
+.dev {
+width: 177px;
+height: 177px;
+left: 490px;
+top: 690px;
+}
+.footer{
+    margin-top: 610px;
+    
+    }  
+} */
+
+/* @media(min-width:768px)
+{
+    
+}
+/*
+@media(min-width: 992px)
+{
+    
+} */
+
