@@ -1088,6 +1088,10 @@ img {
   margin: 50px auto;
 }
 
+
+
+
+
 .tabs {
   font-size: 15px;
   padding: 0px;
@@ -1162,6 +1166,12 @@ section.special header.major h2:after {
   margin-right: auto;
   
 }
+
+.table-wrapper {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
 
 
 
