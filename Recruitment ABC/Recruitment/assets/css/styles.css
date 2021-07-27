@@ -5,6 +5,8 @@
   size: 1535px 735px; 
 }*/
 
+
+
 .why{
    background-image: linear-gradient(to bottom,rgb(10, 14, 39), rgb(63, 79, 187));
    background-size: cover;
@@ -304,7 +306,7 @@ p a{
 
 @media (max-width:767px){
  .why{
-     margin-top: 14rem;
+     margin-top: 22rem;
      height: auto;
      width: auto;
  }
