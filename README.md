@@ -2,11 +2,11 @@
 Official Website of Alpha Bio Cell for 2021-22
 <br>
 
-The website is hosted [here](http://www.abc-vit.in/)
+The website is hosted [here](https://alpha-bio-cell.github.io/ABC-Official-Website-2021/)
 
 <br>
 
-<p align="center"><a href="https://alpha-bio-cell.github.io/ABC-Official-Website-2021/" target="_blank"><img src="img\abc.jpg" title="Alpha Bio Cell" alt="Alpha Bio Cell"></a>
+<p align="center"><a href="https://www.alphabiocell.in/" target="_blank"><img src="img\abc.jpg" title="Alpha Bio Cell" alt="Alpha Bio Cell"></a>
 
 <h2 align="center"> About ABC </h2>
 
