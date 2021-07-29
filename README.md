@@ -6,7 +6,7 @@ The website is hosted [here](http://www.abc-vit.in/)
 
 <br>
 
-<p align="center"><a href="http://www.abc-vit.in/" target="_blank"><img src="img\abc.jpg" title="Alpha Bio Cell" alt="Alpha Bio Cell"></a>
+<p align="center"><a href="https://alpha-bio-cell.github.io/ABC-Official-Website-2021/" target="_blank"><img src="img\abc.jpg" title="Alpha Bio Cell" alt="Alpha Bio Cell"></a>
 
 <h2 align="center"> About ABC </h2>
 
