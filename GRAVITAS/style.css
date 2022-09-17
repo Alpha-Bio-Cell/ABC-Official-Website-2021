@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.styles {
+    border: 3px solid rgb(21, 2, 2);
+    border-collapse: collapse;
+    border-radius: 10px;
+    padding: 10px;
+    margin:auto;
+    font-size:30px;
+}
+
+.table {
+    width: 80px;
+}
+
+.th1 {
+    height: 60px;
+    font-family: "Times New Roman";
+    font-size: 30px;
+    color: rgb(17, 2, 2);
+}
+
+.nav {
+    font-size: 200px;
+}
+
+.td1 {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Roboto";
+}
+#heading {
+    margin-left: 10px;
+    color: blueviolet;
+  }
+  
+  #speakerAbout,
+  #sponsorAbout,
+  #cashflowshow,
+  #addMerchandiseshow {
+    padding:0px 70px;
+    font-size: 18px;
+  }
+  
+  #speaker,
+  #sponsor,
+  #cashflow,
+  #merchandise {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 15px 0;
+    padding: 0px 50px;
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  ul {
+    margin: 0;
+  }
+  ul.dashed {
+    list-style-type: none;
+  }
+  ul.dashed > li {
+    text-indent: -5px;
+  }
+  ul.dashed > li:before {
+    content: "- ";
+    text-indent: -5px;
+  }
+  
+  body {
+    font-family : 'Roboto', sans-serif;
+  }
