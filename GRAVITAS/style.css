@@ -33,7 +33,7 @@ body{
     padding-left: 28%;
     color: transparent;
     font-family:'Josefin';
-    font-size:6em;
+    font-size:5em;
     background-image: linear-gradient(to left,#e02c2c,#5834db,#7a209e,#7d0463);
     -webkit-background-clip: text;
     animation: dynamic 6s linear infinite;
