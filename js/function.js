@@ -43,38 +43,50 @@ $(".tabs").on("click", "a", function (e) {
 
 
 // TODO:Improve below code i.e., use function and pass element to be displayed in that
+$("#title-new-board-desktop").on("click", function (e) {
+	$('#new-board').fadeIn('slow');
+	$('#current-board').fadeOut('fast');
+	$("#ex-board").fadeOut('fast');
+	$("#advisory-board").fadeOut('fast');
+});
 $("#title-current-board-desktop").on("click", function (e) {
 	$('#current-board').fadeIn('slow');
 	$("#ex-board").fadeOut('fast');
+	$('#new-board').fadeOut('fast');
 	$("#advisory-board").fadeOut('fast');
 });
 
 $("#title-ex-board-desktop").on("click", function (e) {
 	$('#ex-board').fadeIn('slow');
 	$("#current-board").fadeOut('fast');
+	$('#new-board').fadeOut('fast');
 	$("#advisory-board").fadeOut('fast');
 });
 
 $("#title-advisory-board-mobile").on("click", function (e) {
 	$('#advisory-board').fadeIn('slow');
 	$("#ex-board").fadeOut('fast');
+	$('#new-board').fadeOut('fast');
 	$("#current-board").fadeOut('fast');
 });
 
 $("#title-current-board-mobile").on("click", function (e) {
 	$('#current-board').fadeIn('slow');
+	$('#new-board').fadeOut('fast');
 	$("#ex-board").fadeOut('fast');
 	$("#advisory-board").fadeOut('fast');
 });
 
 $("#title-ex-board-mobile").on("click", function (e) {
 	$('#ex-board').fadeIn('slow');
+	$('#new-board').fadeOut('fast');
 	$("#current-board").fadeOut('fast');
 	$("#advisory-board").fadeOut('fast');
 });
 
 $("#title-advisory-board-desktop").on("click", function (e) {
 	$('#advisory-board').fadeIn('slow');
+	$('#new-board').fadeOut('fast');
 	$("#ex-board").fadeOut('fast');
 	$("#current-board").fadeOut('fast');
 });
@@ -83,14 +95,16 @@ $(document).ready(function () {
 	keepCurrentBoardDiv();
 
 	if ($('#content-desktop').css('display') == 'block') {
-		$("#title-current-board-desktop").click();
+		$("#title-new-board-desktop").click();
 
 	} else {
-		$("#title-current-board-mobile").click();
+		$("#title-new-board-mobile").click();
 	}
 })
 
 function keepCurrentBoardDiv() {
+	// $('#current-board').fadeIn('slow');
+	$('#current-board').fadeOut('fast');
 	$("#ex-board").fadeOut('fast');
 	$("#advisory-board").fadeOut('fast');
 }
